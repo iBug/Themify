@@ -14,8 +14,7 @@ Dim I_ConfigFileName, I_ThemeFileName, I_DirectiveFileName, I_ValidExtensions
 C_Time = Now()
 I_ConfigFileName = Fso.GetSpecialFolder(2) & "\themify.ini"
 I_ThemeFileName = Fso.GetSpecialFolder(2) & "\Themify.theme"
-'I_DirectiveFileName = Fso.GetSpecialFolder(2) & "\themify.ddf"
-I_DirectiveFileName = ".\themify.ddf"
+I_DirectiveFileName = Fso.GetSpecialFolder(2) & "\themify.ddf"
 I_ValidExtensions = Array("bmp", "jpg", "jpeg", "png")
 
 GetConfig I_ConfigFileName
