@@ -41,6 +41,7 @@ Shell.Run "Collect.vbs """ & C_SourceDir & """ """ & S_WD & "\DesktopBackground"
 ' 2. Create the theme file
 Set ConfigFile = Fso.OpenTextFile(S_ThemeConfigFileName, 2, True)
 ConfigFile.WriteLine "C_DefaultBackground = """ & C_Cover & """"
+ConfigFile.WriteLine "C_DisplayName = """ & C_Name & """"
 ConfigFile.Close
 Set ConfigFile = Nothing
 Shell.Run "CreateTheme.vbs " & S_WD & "\Generating.theme " & S_ThemeConfigFileName,, True

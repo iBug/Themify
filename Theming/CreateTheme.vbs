@@ -16,7 +16,7 @@ C_DefaultBackground = "default.jpg"
 C_AutoColor = 1
 C_Interval = 600000
 C_Shuffle = 1
-ThemeFileName = "Generating.theme"
+ThemeFileName = C_DisplayName & ".theme"
 ConfigFileName = ""
 
 If WScript.Arguments.Count >= 1 Then
