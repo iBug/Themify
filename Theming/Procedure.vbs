@@ -29,6 +29,10 @@ C_Name = WScript.Arguments(1)
 If WScript.Arguments.Count >= 3 Then
   C_OutputFile = WScript.Arguments(2)
 End If
+If Fso.GetExtensionName(C_OutputFile) <> "deskthemepack" _
+  And Fso.GetExtensionName(C_OutputFile) <> "deskthemepack" Then
+  C_OutputFile = C_OutputFile & ".deskthemepack"
+End If
 
 If Fso.FolderExists(S_WD) Then
   Fso.DeleteFolder S_WD
