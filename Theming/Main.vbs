@@ -52,6 +52,12 @@ ConfigFile.Close
 Set ConfigFile = Nothing
 Fso.DeleteFile ConfigFileName
 
+' Validate config
+If Not Fso.FolderExists(C_Source) Then
+  MsgBox "The source folder """ & C_Source & """ does not exist!", 16, Title
+  WScript.Quit 1
+End If
+
 ' Run the procedure
 Dim Command
 Command = "Procedure.vbs """ & C_Source & """ """ & C_Name & """ """ & C_Output & """"
