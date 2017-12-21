@@ -1,5 +1,6 @@
 ' File: Main.vbs
 Option Explicit
+Const Title = "iBug Theme Creator"
 
 Dim Shell, Fso
 Set Shell = CreateObject("WScript.Shell")
@@ -9,14 +10,17 @@ Dim ConfigFileName, DefaultConfig, ConfigLine, Config
 Dim ConfigFile
 Dim C_Source, C_Name, C_Output
 
-ConfigFileName = "config.ini"
-DefaultConfig = "; Creation Time: " & Now() & vbCrlf & vbCrLf & _
+ConfigFileName = Fso.GetSpecialFolder(2) & "\config.ini"
+DefaultConfig = "; " & Title & " running at: " & Now() & vbCrlf & vbCrLf & _
   "; Path containing images to be made into the theme pack" & vbCrLf & _
   "SourcePath=C:\WINDOWS\Web\Wallpaper\Theme1" & vbCrLf & vbCrLf & _
   "; Name of the theme" & vbCrLf & _
   "ThemeName=My Theme" & vbCrLf & vbCrLf & _
   "; The generated file (extension will be automatically appended)" & vbCrLf & _
   "OutputFile=Output" & vbCrLf & vbCrLf
+
+' Notify user
+MsgBox "Please set the parameters in the configuration file.", 0, Title
 
 ' Generate the default config
 Set ConfigFile = Fso.OpenTextFile(ConfigFileName, 2, True)
@@ -40,7 +44,7 @@ Do Until ConfigFile.AtEndOfStream
       Case "OutputFile"
         C_Output = Trim(Config(1)) & ".deskthemepack"
       Case Else
-        MsgBox "Unknown option """ & Config(0) & """", vbExclamation, "Theme Creator"
+        MsgBox "Unknown option """ & Config(0) & """", vbExclamation, Title
     End Select
   End If
 Loop
@@ -51,6 +55,7 @@ Fso.DeleteFile ConfigFileName
 ' Run the procedure
 Dim Command
 Command = "Procedure.vbs """ & C_Source & """ """ & C_Name & """ """ & C_Output & """"
-'If MsgBox(Command, vbYesNo, "Theme Creator") = vbYes Then
+'Uncomment the IF lines if you want an extra confirmation
+'If MsgBox(Command, vbYesNo, Title) = vbYes Then
   Shell.Run Command,, False
 'End If
