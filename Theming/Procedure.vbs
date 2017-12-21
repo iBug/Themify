@@ -1,4 +1,4 @@
-' File: Theming.Main.vbs
+' File: Procedure.vbs
 Option Explicit
 
 Dim Shell, Fso
@@ -36,7 +36,7 @@ End If
 Fso.CreateFolder S_WD
 
 ' 1. Collect all images from the given directory
-Shell.Run "Collect.vbs " & C_SourceDir & " " & S_WD & "\DesktopBackground",, True
+Shell.Run "Collect.vbs """ & C_SourceDir & """ """ & S_WD & "\DesktopBackground""",, True
 
 ' 2. Create the theme file
 Set ConfigFile = Fso.OpenTextFile(S_ThemeConfigFileName, 2, True)

@@ -7,7 +7,7 @@ Dim ConfigFileName, ThemeFolderName, OutputThemeName
 Set Shell = CreateObject("WScript.Shell")
 Set Fso = CreateObject("Scripting.FileSystemObject")
 
-ConfigFileName = "packing.ddf"
+ConfigFileName = "Packing.ddf"
 ThemeFolderName = "Packing"
 OutputThemeName = "Packing.deskthemepack"
 
