@@ -19,6 +19,16 @@ S_WD = Mid(C_OutputFile, 1, Len(C_OutputFile)-1) & "_"
 S_ThemeConfigFileName = "config.vbs"
 
 ' TODO: Read configuration file
+If WScript.Arguments.Count < 2 Then
+  WScript.Echo "Usage: " & vbCrLf & Fso.GetFileName(WScript.ScriptFullName) & " <Source> <Name> [OutputFile]"
+  WScript.Quit 1
+End If
+
+C_SourceDir = WScript.Arguments(0)
+C_Name = WScript.Arguments(1)
+If WScript.Arguments.Count >= 3 Then
+  C_OutputFile = WScript.Arguments(2)
+End If
 
 If Fso.FolderExists(S_WD) Then
   Fso.DeleteFolder S_WD
