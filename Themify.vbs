@@ -139,8 +139,8 @@ End Sub
 
 Sub WriteCritical(ByRef TextFile)
   TextFile.WriteLine "[MasterThemeSelector]"
-  TextFile.WriteLine "MTSM=RJSPBS"
-  'TextFile.WriteLine "MTSM=DABJDKT"
+  'TextFile.WriteLine "MTSM=RJSPBS"
+  TextFile.WriteLine "MTSM=DABJDKT"
   TextFile.WriteLine ""
 End Sub
 
