@@ -27,7 +27,7 @@ End If
 C_SourceDir = WScript.Arguments(0)
 C_Name = WScript.Arguments(1)
 If WScript.Arguments.Count >= 3 Then
-  C_OutputFile = WScript.Arguments(2)
+  C_OutputFile = WScript.Arguments(2) & ".deskthemepack"
 End If
 
 If Fso.FolderExists(S_WD) Then
