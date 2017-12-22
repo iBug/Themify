@@ -1,5 +1,13 @@
 # iBug Themify Change Log
 
+### 5
+
+Add support for command line arguments. Currectly it only reads the first argument as the configuration file and proceeds automatically.
+
+```
+Themify.vbs <ConfigFile>
+```
+
 ### 4
 
 A line containing an equal sign `=` will no longer cause error if it starts with a semicolon `;`
