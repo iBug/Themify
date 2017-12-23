@@ -1,5 +1,11 @@
 # iBug Themify Change Log
 
+### 7
+
+Allow more than 1,000 files.
+
+You can now use default output file name
+
 ### 6
 
 Now you can specify a slideshow interval.
