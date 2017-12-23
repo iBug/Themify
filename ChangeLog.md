@@ -1,5 +1,11 @@
 # iBug Themify Change Log
 
+### 6
+
+Now you can specify a slideshow interval.
+
+A small typo fix.
+
 ### 5
 
 Add support for command line arguments. Currectly it only reads the first argument as the configuration file and proceeds automatically.
