@@ -1,10 +1,14 @@
 # iBug Themify Change Log
 
+### 8
+
+Automatically cut off CAB file at 2 GB (CAB file can't exceed 2 GiB)
+
 ### 7
 
 Allow more than 1,000 files.
 
-You can now use default output file name
+You can now let ***Themify*** default output file name
 
 ### 6
 
