@@ -315,9 +315,9 @@ Sub WriteDirectiveFile(ByVal FileName, ByRef FileNames)
   DirectiveFile.WriteLine ".Set CabinetFileCountThreshold=0"
   DirectiveFile.WriteLine ".Set FolderFileCountThreshold=0"
   DirectiveFile.WriteLine ".Set FolderSizeThreshold=0"
-  DirectiveFile.WriteLine ".Set MaxCabinetSize=2147483647"
+  DirectiveFile.WriteLine ".Set MaxCabinetSize=0"
   DirectiveFile.WriteLine ".Set MaxDiskFileCount=0"
-  DirectiveFile.WriteLine ".Set MaxDiskSize=2147483647"
+  DirectiveFile.WriteLine ".Set MaxDiskSize=0"
   DirectiveFile.WriteLine """" & I_ThemeFileName & """ """ & Fso.GetFileName(I_ThemeFileName) & """"
   DirectiveFile.Close
   WriteDirTree C_Source, 0, 0, FileNames, Nothing, NewExtendableWriterControl()
